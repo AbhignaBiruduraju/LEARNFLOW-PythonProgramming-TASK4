@@ -1,3 +1,4 @@
+import getpass
 import datetime
 import smtplib
 import time
@@ -28,7 +29,7 @@ def quit_mail():
 
 def email_sender():
     from_address = input("Email: ")
-    password = input("Password: ")
+    password = getpass.getpass(prompt="Password: ")
     to_address = from_address
 
     datetime_str = input("Enter date and time in the format YYYY-MM-DD HH:MM:SS: ")
